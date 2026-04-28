@@ -1,128 +1,150 @@
-#  YouTube Data Pipeline (ETL) & Analytics Dashboard
+# 📊 YouTube Data Pipeline (ETL) & Analytics Dashboard
 
-##  Project Overview
-
-This project builds an end-to-end data pipeline using the YouTube Data API to analyze trending videos.
-
-The pipeline extracts data, transforms it into meaningful insights, stores it in a database, and visualizes it using Microsoft Power BI.
+🚀 An end-to-end **data engineering + analytics project** that extracts trending YouTube data using API, processes it using Python, stores it in MySQL, and visualizes insights through an interactive Power BI dashboard.
 
 ---
 
-##  Problem Statement
+## 🎯 Project Overview
 
-With the rapid growth of video content on YouTube, analyzing trending videos, engagement, and category performance manually is difficult.
+This project demonstrates a complete **ETL pipeline**:
 
-This project aims to:
+📥 Extract → 🧹 Transform → 💾 Load → 📊 Visualize  
 
-* Extract trending video data
-* Transform and clean raw data
-* Store it in a structured format
-* Visualize insights using dashboards
+- Extract trending YouTube videos using API  
+- Clean and transform raw data using Python (Pandas)  
+- Store structured data in MySQL database  
+- Perform analysis using SQL  
+- Build interactive dashboard in Power BI  
+
+---
+
+## 🧠 Problem Statement
+
+Analyzing YouTube trending data manually is difficult due to:
+- Unstructured API data  
+- Large data volume  
+- Lack of ready insights  
+
+👉 This project automates the process and provides meaningful insights like:
+- Top performing videos  
+- Category-wise performance  
+- Engagement trends  
+- Time-based analysis  
 
 ---
 
 ## ⚙️ Tech Stack
 
-* Python (Pandas, API handling)
-* MySQL (Database)
-* SQL (Data Analysis)
-* Power BI (Dashboard)
+- 🐍 Python (Pandas, API Integration)  
+- 📡 YouTube Data API v3  
+- 🗄️ MySQL  
+- 🧮 SQL  
+- 📊 Power BI  
 
 ---
 
 ## 🔄 ETL Pipeline
 
-### 1. Extract
-
-* Fetched trending videos using YouTube API
-* Extracted fields like title, channel, views, likes, category, publish date
-
-### 2. Transform
-
-* Cleaned data using Pandas
-* Converted data types (views, likes)
-* Created engagement rate column
-* Mapped category IDs to category names
-
-### 3. Load
-
-* Stored processed data into MySQL database
+### 📥 Extract
+- Data fetched using YouTube API  
+- Region: India (Trending Videos)  
+- Fields:
+  - title  
+  - channel  
+  - views  
+  - likes  
+  - category_id  
+  - publish_date  
 
 ---
 
-## 📊 Dashboard Features
+### 🧹 Transform
+- Converted views & likes → numeric  
+- Converted publish_date → datetime  
+- Mapped category_id → category name  
+- Created new feature:
+  
+  **engagement_rate = likes / views**
 
-* 🔝 Top 10 Trending Videos by Views
-* 📊 Category-wise Distribution
-* ❤️ Top Channels by Likes
-* 📈 Views Trend Over Time
-* 📊 Views vs Likes Analysis
-
----
-
-## 🔍 Key Insights
-
-* Top 5 videos contribute a major portion of total views
-* Some videos have high views but low engagement
-* Category performance varies significantly
-* Engagement does not always correlate with views
+- Removed missing values  
 
 ---
 
-## 📁 Project Structure
-
-* `scripts/` → Python ETL scripts
-* `data/` → Raw and processed data
-* `sql/` → SQL analysis queries
-* `dashboard/` → Power BI dashboard
+### 💾 Load
+- Loaded processed data into MySQL  
+- Table name: `trending_videos`  
+- Enabled efficient querying  
 
 ---
 
-## ▶️ How to Run
+## 📂 Dataset
 
-### 1. Clone Repository
+### 🔹 Raw Data
+- `data/raw_data.csv`  
+- Direct API output  
+- Unstructured  
 
-```
-git clone https://github.com/your-username/youtube-etl-dashboard.git
-cd youtube-etl-dashboard
-```
+### 🔹 Processed Data
+- `data/processed_data.csv`  
+- Cleaned and structured  
+- Ready for analysis  
 
-### 2. Install Dependencies
+---
 
-```
-pip install -r requirements.txt
-```
+## 📊 Power BI Dashboard
 
-### 3. Run ETL Scripts
+### 🔝 Features:
+- KPI Cards:
+  - Total Views  
+  - Total Likes  
+  - Total Videos  
+  - Avg Engagement Rate  
 
-```
-python scripts/extract.py
-python scripts/transform.py
-python scripts/load.py
-```
+- Visualizations:
+  - Top Videos by Views  
+  - Category Distribution  
+  - Channel Performance  
+  - Views Trend Over Time  
+  - Views vs Likes (Scatter Plot)  
 
 ---
 
 ## 📸 Dashboard Preview
 
-(Add your screenshot here)
+### 🏠 Home Page
+![Dashboard Home](Screenshots/dashboard_home.png)
+
+### 📄 Details Page
+![Dashboard Details](Screenshots/dashboard_details.png)
 
 ---
 
-## 🎯 Conclusion
+## 💡 Key Insights
 
-This project demonstrates the ability to build a complete data pipeline from API to dashboard and extract meaningful business insights.
-
----
-
-## 💡 Future Improvements
-
-* Automate pipeline using scheduler
-* Store historical data
-* Add real-time analytics
+- A small number of videos generate the majority of views  
+- Music and Entertainment dominate trending content  
+- High views do not always mean high engagement  
+- Some low-view videos achieve higher engagement rates  
 
 ---
 
-## 🙌 Author
+## 📁 Project Structure
+youtube-etl-project/
+│
+├── assets/              # Dashboard screenshots  
+├── data/                # Raw & processed datasets  
+├── notebooks/           # ETL pipeline notebooks  
+├── sql_queries.sql      # SQL analysis  
+├── dashboard.pbix       # Power BI dashboard  
+├── project_report.pdf   # Documentation  
+├── presentation.pptx    # PPT  
+└── README.md  
 
-Your Name
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/your-username/youtube-etl-dashboard.git
+cd youtube-etl-dashboard
