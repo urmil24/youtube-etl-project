@@ -1,10 +1,10 @@
-# 📊 YouTube Data Pipeline (ETL) & Analytics Dashboard
+#  YouTube Data Pipeline (ETL) & Analytics Dashboard
 
-🚀 An end-to-end **data engineering + analytics project** that extracts trending YouTube data using API, processes it using Python, stores it in MySQL, and visualizes insights through an interactive Power BI dashboard.
+An end-to-end **data engineering + analytics project** that extracts trending YouTube data using API, processes it using Python, stores it in MySQL, and visualizes insights through an interactive Power BI dashboard.
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This project demonstrates a complete **ETL pipeline**:
 
@@ -18,14 +18,14 @@ This project demonstrates a complete **ETL pipeline**:
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Analyzing YouTube trending data manually is difficult due to:
 - Unstructured API data  
 - Large data volume  
 - Lack of ready insights  
 
-👉 This project automates the process and provides meaningful insights like:
+This project automates the process and provides meaningful insights like:
 - Top performing videos  
 - Category-wise performance  
 - Engagement trends  
@@ -33,17 +33,17 @@ Analyzing YouTube trending data manually is difficult due to:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
-- 🐍 Python (Pandas, API Integration)  
-- 📡 YouTube Data API v3  
-- 🗄️ MySQL  
-- 🧮 SQL  
-- 📊 Power BI  
+- Python (Pandas, API Integration)  
+- YouTube Data API v3  
+- MySQL  
+- SQL  
+- Power BI  
 
 ---
 
-## 🔄 ETL Pipeline
+## ETL Pipeline
 
 ### 📥 Extract
 - Data fetched using YouTube API  
@@ -91,9 +91,9 @@ Analyzing YouTube trending data manually is difficult due to:
 
 ---
 
-## 📊 Power BI Dashboard
+## Power BI Dashboard
 
-### 🔝 Features:
+###  Features:
 - KPI Cards:
   - Total Views  
   - Total Likes  
@@ -109,17 +109,17 @@ Analyzing YouTube trending data manually is difficult due to:
 
 ---
 
-## 📸 Dashboard Preview
+##  Dashboard Preview
 
-### 🏠 Home Page
+###  Home Page
 ![Dashboard Home](Screenshots/dashboard_home.png)
 
-### 📄 Details Page
+###  Details Page
 ![Dashboard Details](Screenshots/dashboard_details.png)
 
 ---
 
-## 💡 Key Insights
+##  Key Insights
 
 - A small number of videos generate the majority of views  
 - Music and Entertainment dominate trending content  
@@ -142,9 +142,9 @@ youtube-etl-project/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
-### 1️⃣ Clone Repository
+###  Clone Repository
 ```bash
 git clone https://github.com/your-username/youtube-etl-dashboard.git
 cd youtube-etl-dashboard
